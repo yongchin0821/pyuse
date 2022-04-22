@@ -58,8 +58,9 @@ class Time:
             self._struct_time = time.strptime(self._time, "%Y-%m-%d %H:%M:%S")
             return
         except Exception as e:
-            raise ("321", repr(e))
-
+            e.args = "time data '{}' does not match format '%a %b %d %H:%M:%S %Y' or '%Y年%m月%d日 %H:%M:%S' or '%Y-%m-%d %H:%M:%S'".format(
+                value),
+            raise e.with_traceback(e.__traceback__)
 
     @property
     def timestamp(self):
@@ -68,6 +69,30 @@ class Time:
     @timestamp.setter
     def timestamp(self, val):
         self._struct_time = time.localtime(val)
+
+    @property
+    def year(self):
+        return time.strftime("%Y", self._struct_time)
+
+    @property
+    def month(self):
+        return time.strftime("%m", self._struct_time)
+
+    @property
+    def day(self):
+        return time.strftime("%d", self._struct_time)
+
+    @property
+    def hour(self):
+        return time.strftime("%H", self._struct_time)
+
+    @property
+    def minute(self):
+        return time.strftime("%M", self._struct_time)
+
+    @property
+    def second(self):
+        return time.strftime("%S", self._struct_time)
 
     @staticmethod
     def get_date():
@@ -98,45 +123,44 @@ class Time:
         return date
 
     @staticmethod
-    def to_timestamp(jikan, index):
+    def to_timestamp(format_time: str, index: str):
         """
         Desc:
-            时间转时间戳
-            "%Y-%m-%d %H:%M:%S"
+            time to timestamp
         Args:
-            jikan: <list> 传入时间
-            index: <list> 索引格式，例如"%Y-%m-%d %H:%M:%S"
+            format_time: <str> 传入时间
+            index: <str> 索引格式，例如"%Y-%m-%d %H:%M:%S"
         Example:
             to_timestamp('2020年12月21日', '%Y年%m月%d日')
         return:
-            timestamp：时间戳
+            timestamp
         """
-        struct_time = time.strptime(jikan, index)
+        struct_time = time.strptime(format_time, index)
         timestamp = time.mktime(struct_time)
         return timestamp
 
     @staticmethod
-    def to_jikan(timestamp: int, index: str):
+    def to_time(timestamp: int, index: str):
         """
         Desc:
             timestamp to time
         Args:
             timestamp: <int> 传入时间，单位为毫秒
-            index: <string> 索引格式，例如"%Y-%m-%d %H:%M:%S"
+            index: <str> 索引格式，例如"%Y-%m-%d %H:%M:%S"
         Example:
-            to_jikan('1650526296526', '%Y年%m月%d日')
+            to_time('1650526296526', '%Y年%m月%d日')
         return:
-            jikan：时间
+            format_time: time after formatting
         """
-        jikan = time.strftime(index, time.localtime(timestamp / 1000))
-        return jikan
+        format_time = time.strftime(index, time.localtime(timestamp / 1000))
+        return format_time
 
-    @staticmethod
-    def time_now():
+    def time_now(self):
         """
         return:
-            timenow: 返回年月日时分秒
-            '2021-03-11 10:51:11'
+            timenow:
+                '2021-03-11 10:51:11'
         """
-        timenow = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+        self._struct_time = time.localtime()
+        timenow = time.strftime("%Y-%m-%d %H:%M:%S", self._struct_time)
         return timenow
