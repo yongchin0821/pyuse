@@ -1,0 +1,11 @@
+.idea
+*.pyc
+*.lo
+build
+dist
+.history
+pyuse_core.egg-info
+node_modules
+.temp
+.cache
+.pypirc
