@@ -39,7 +39,7 @@ class Path:
         self._alias = value
 
     def path(self, path: str) -> str:
-        for (k, v) in self.alias.items():
+        for (k, v) in self._alias.items():
             path = path.replace(k, v)
 
         return path
@@ -88,6 +88,9 @@ class Path:
 
 if __name__ == '__main__':
     p = Path()
+    print(p.floder_path)
+    print(p.exec_path)
+    print(p.file_path)
+    print(p.filename)
     print(p.alias)
-    report_path = p.path("@/sejif/test.py")
-    print(report_path)
+    print(p.path("~/reports/log.txt"))

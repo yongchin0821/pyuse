@@ -1,4 +1,4 @@
-.idea
+.idea/*
 *.pyc
 *.lo
 build
@@ -9,3 +9,5 @@ node_modules
 .temp
 .cache
 .pypirc
+.Ds_Store
+yarn-error.log

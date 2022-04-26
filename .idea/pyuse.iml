@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="PYTHON_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/docs/node_modules/@vitejs/plugin-vue/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/docs/node_modules/@vue/compiler-core/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/docs/node_modules/@vue/compiler-dom/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/docs/node_modules/@vue/compiler-sfc/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/docs/node_modules/@vue/compiler-ssr/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/docs/node_modules/@vue/reactivity/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/docs/node_modules/@vue/reactivity-transform/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/docs/node_modules/@vue/runtime-core/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/docs/node_modules/@vue/runtime-dom/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/docs/node_modules/@vue/server-renderer/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/docs/node_modules/@vue/shared/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/docs/node_modules/@vuepress/bundler-vite/lib/build" />
+      <excludeFolder url="file://$MODULE_DIR$/docs/node_modules/@vuepress/cli/lib/commands/build" />
+      <excludeFolder url="file://$MODULE_DIR$/docs/node_modules/cac/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/docs/node_modules/caniuse-lite/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/docs/node_modules/css-tree/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/docs/node_modules/csso/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/docs/node_modules/envinfo/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/docs/node_modules/escalade/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/docs/node_modules/esprima/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/docs/node_modules/estree-walker/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/docs/node_modules/human-signals/build" />
+      <excludeFolder url="file://$MODULE_DIR$/docs/node_modules/immutable/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/docs/node_modules/js-yaml/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/docs/node_modules/klona/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/docs/node_modules/magic-string/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/docs/node_modules/markdown-it/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/docs/node_modules/markdown-it-anchor/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/docs/node_modules/markdown-it-container/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/docs/node_modules/markdown-it-emoji/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/docs/node_modules/medium-zoom/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/docs/node_modules/rollup/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/docs/node_modules/sass-loader/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/docs/node_modules/source-map/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/docs/node_modules/sourcemap-codec/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/docs/node_modules/sprintf-js/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/docs/node_modules/ts-debounce/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/docs/node_modules/upath/build" />
+      <excludeFolder url="file://$MODULE_DIR$/docs/node_modules/vite/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/docs/node_modules/vue/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/docs/node_modules/vue-router/dist" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
