@@ -64,7 +64,7 @@ class Time:
 
     @property
     def timestamp(self):
-        return time.mktime(self._struct_time)
+        return round(time.mktime(self._struct_time))
 
     @timestamp.setter
     def timestamp(self, val):
@@ -136,7 +136,7 @@ class Time:
             timestamp
         """
         struct_time = time.strptime(format_time, index)
-        timestamp = time.mktime(struct_time)
+        timestamp = round(time.mktime(struct_time))
         return timestamp
 
     @staticmethod
