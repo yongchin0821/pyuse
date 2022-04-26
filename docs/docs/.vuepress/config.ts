@@ -1,7 +1,10 @@
-const { defaultTheme } = require("@vuepress/theme-default");
-const { searchPlugin } = require("@vuepress/plugin-search");
+import { path } from '@vuepress/utils'
+// import { defaultTheme } from "@vuepress/theme-default"
+import { searchPlugin } from "@vuepress/plugin-search"
+import { defaultTheme, defineUserConfig } from 'vuepress'
 
-module.exports = {
+
+export default defineUserConfig({
   // title: "pyuse文档",
   description: "基于unittest 的 Web UI/HTTP自动化测试框架。",
   base: "/",
@@ -74,6 +77,10 @@ module.exports = {
     },
     editLinks: true,
     editLinkText: "在 GitHub 上编辑此页",
-    lastUpdated: "上次更新",
+    lastUpdated: true,
+    lastUpdatedText: "上次更新",
   }),
-};
+  alias: {
+    '@theme/HomeHero.vue': path.resolve(__dirname, './components/Home.vue'),
+  },
+})
