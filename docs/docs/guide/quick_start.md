@@ -1,18 +1,18 @@
-# 快速开始
+# quick started
 
-### 安装
+### installation
 
 #### pip
 
-使用 npm 安装。
+use npm to install。
 
 ```shell
 pip install pyuse-core
 ```
 
-### 使用
+### usage
 
-在任意IDE中创建python脚本test.py
+create python script test.py in any IDE
 
 ```python
 from pyuse import useTime
@@ -21,6 +21,6 @@ t = useTime()
 print(t.time_now())
 ```
 
-:sparkling_heart:祝您食用愉快~
+:sparkling_heart:wish you Happy cooking~
 
 

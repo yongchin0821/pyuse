@@ -35,11 +35,11 @@ export default defineUserConfig({
     }),
   ],
   theme: defaultTheme({
-    repo: "nickliya/pyuse",
+    repo: "yongchin0821/pyuse",
     docsBranch: "main/docs/docs",
     locales: {
       "/": {
-        navbar: [{ text: "guide", link: "/introduce" }],
+        navbar: [{ text: "guide", link: "guide/introduce" }],
         sidebar: [
           {
             text: "Guide",
@@ -57,19 +57,19 @@ export default defineUserConfig({
         ],
       },
       "/zh/": {
-        navbar: [{ text: "指南", link: "/introduce" }],
+        navbar: [{ text: "指南", link: "/zh/guide/introduce" }],
         sidebar: [
           {
             text: "指南",
-            children: ["/guide/introduce", "/guide/quick_start"],
+            children: ["/zh/guide/introduce", "/zh/guide/quick_start"],
           },
           {
             text: "核心功能",
             children: [
-              "/api/useDingTalk",
-              "/api/useGenerator",
-              "/api/usePath",
-              "/api/useTime",
+              "/zh/api/useDingTalk",
+              "/zh/api/useGenerator",
+              "/zh/api/usePath",
+              "/zh/api/useTime",
             ],
           },
         ],

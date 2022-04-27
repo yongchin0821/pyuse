@@ -1,15 +1,15 @@
-# PyUse
+# Introduction
 
-PyUse 是一个 Python3 的一个库。里面有很多轮子。
+PyUse is a Python3 library。have wheels in it。
 
-要了解如何安装，参见[安装](/guide/quick_start)。
+To know how to install it, see [installation](/guide/quick_start)。
 
-它会不断完善，开箱即用，快。
+It will continue to improve, out of the box，easy and fast to use。
 
-### 比较完整
+### Relatively complete
 
-有几个轮子，希望能帮你少写点代码。
+have some wheels，hope it helps you to write less code.
 
-### 许可
+### License
 
-PyUse 使用 MIT license 许可证书。
+PyUse is licensed under the MIT license.

@@ -2,26 +2,26 @@
 
 ### 📚 desciption
 
-utils about of time
+关于时间的一些utils
 
 ### 🪧 property
 
-static: read only
-dynamic: can be changed，will share state with other dynamic properties
+static: 只读属性
+dynamic: 意味着你可以改变它的值，且可能与其他动态属性共享状态
 
 #### static
 
-- year: -> str
-- month: -> str
-- day: -> str
-- hour: -> str
-- minute: -> str
-- second: -> str
+- year: 年 -> str
+- month: 月 -> str
+- day: 日 -> str
+- hour: 时 -> str
+- minute: 分 -> str
+- second: 秒 -> str
 
 #### dynamic
 
-- time: -> str
-- timestamp: -> int
+- time: 时间 -> str
+- timestamp: 时间戳 -> int
 
 ```python
 test.py

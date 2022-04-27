@@ -2,20 +2,19 @@
 
 ### 📚 desciption
 
-utils about of path
+关于路径的一些utils
 
 ### 🪧 property
 
-static: read only
-dynamic: can be changed，will share state with other dynamic properties
-
+static: 只读属性
+dynamic: 意味着你可以改变它的值，且可能与其他动态属性共享状态
 
 #### static
 
-- floder_path: floder path -> str
-- exec_path: execution path -> str
-- file_path: file path -> str
-- filename: file name -> str
+- floder_path: 目录路径 -> str
+- exec_path: 执行路径 -> str
+- file_path: 文件路径 -> str
+- filename: 文件名 -> str
 
 #### dynamic
 

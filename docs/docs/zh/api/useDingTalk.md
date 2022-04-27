@@ -2,7 +2,7 @@
 
 ### 📚 desciption
 
-utils about of dingtalk robot
+关于钉钉机器人的一些utils
 
 ### 🍽️ function
 

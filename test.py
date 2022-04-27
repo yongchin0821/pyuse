@@ -4,10 +4,8 @@
 # @Author  : Yongchin
 
 
-from pyuse import useTime
-from pyuse import usePath
-
-# time.strptime("2021年01月012日 12:00:00")
+# from pyuse import useTime
+#
 # t = useTime()
 # print(t.time)
 # print(t.timestamp)
@@ -17,10 +15,10 @@ from pyuse import usePath
 # print(t.timestamp)
 # print(t.year)
 # print(t.month)
+# print(t.get_date())
+# print(t.to_time(1650526296526, '%Y年%m月%d日'))
+# print(t.to_timestamp('2020年12月21日', '%Y年%m月%d日'))
+# print(t.time_now())
 
-path = usePath()
-print(path.path("~/jifjids/test.py"))
-path._file_path="!23"
 
-
-
+from pyuse import useDingTalk

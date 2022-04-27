@@ -16,10 +16,11 @@ class DingTalk:
                  key: str = None,
                  app_secret: str = None,
                  at_mobiles: list = None,
-                 is_at_all: bool = False):
+                 is_at_all: bool = False,
+                 title: str = None):
         """
         Args:
-            access_token:  钉钉机器人Webhook地址中的access_token
+            access_token: 钉钉机器人Webhook地址中的access_token
             key: 如果钉钉机器人安全设置了关键字，则需要传入对应的关键字。
             app_secret: 如果钉钉机器人安全设置了签名，则需要传入对应的密钥。
             at_mobiles: 发送通知钉钉中要@人的手机号列表，如：[137xxx, 188xxx]。
@@ -32,7 +33,7 @@ class DingTalk:
         self.at_mobiles = at_mobiles
         self.is_at_all = is_at_all
 
-        self.title = "测试结果"
+        self.title = title
 
     def set_config(self, **kwargs):
         """
@@ -48,6 +49,8 @@ class DingTalk:
             self.is_at_all = kwargs["is_at_all"]
         if "access_token" in kwargs:
             self.access_token = kwargs["access_token"]
+        if "title" in kwargs:
+            self.title = kwargs["title"]
 
     def _sign(self) -> dict:
         """
@@ -72,7 +75,7 @@ class DingTalk:
             success:
                 {"errcode":0, "errmsg":"ok"}
             fail:
-                {"errcode":错误码, "errmsg":"失败原因"}
+                {"errcode":errcode, "errmsg":"errmsg"}
         """
         data = {
             "msgtype": "markdown",
@@ -101,9 +104,17 @@ class DingTalk:
 
 if __name__ == '__main__':
     ding = DingTalk(
-        access_token="4fa5c5aa96a3eb982c545e6c37d2f40e31ced8f888b25fe8d7f039xxxxxxxxxx",
+        access_token="4fa5c5aa96x7f039753b6b28ed",
+        # key="xxxx",
+        app_secret="SEC016da7eex6427b305983",
+        at_mobiles=[13500000000, 13800000000],
+        # is_at_all=False,
+    )
+    ding.send("some text")
+    ding.set_config(
+        access_token="4faxxxxxxxxxxxxxxxxxxxxxxxxx6b28ed",
         key="xxxx",
-        app_secret="xxxxx",
-        at_mobiles=[13700000000, 13800000000],
+        app_secret="SECxxxxxxxxxxxxxxx305983",
+        at_mobiles=[13500000000, 13800000000],
         is_at_all=False,
     )

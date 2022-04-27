@@ -16,9 +16,9 @@ setuptools.setup(
     description="A pkg of wheels. Hope it helps you to write less code.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/nickliya/pyuse",
+    url="https://github.com/yongchin0821/pyuse",
     project_urls={
-        "Bug Tracker": "https://github.com/nickliya/pyuse/issues",
+        "Bug Tracker": "https://github.com/yongchin0821/pyuse/issues",
     },
     classifiers=[
         "Programming Language :: Python :: 3",
