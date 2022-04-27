@@ -1,21 +1,96 @@
 <template>
   <div>
     <section id="hero">
-      <h1 class="tagline">
-        <span class="accent">Mix</span>
-        Space
-      </h1>
+      <HomeHeroImage />
+      <h1 class="tagline">Py<span class="accent">Use</span></h1>
 
-      <p class="description">An alternative personal space.</p>
+      <p v-if="tagline" class="description">
+        {{ tagline }}
+      </p>
+      <p v-if="tagline2" class="description">
+        {{ tagline2 }}
+      </p>
+      <p v-if="tagline3" class="description">
+        {{ tagline3 }}
+      </p>
 
       <p class="actions">
-        <a class="get-started" href="/introduce/"> Get Started </a>
-        <a class="setup" href="/deploy/docker">Install</a>
+        <a class="get-started" href="/guide/quick_start/"> Get Started -> </a>
+        <a class="setup" href="/guide/introduce/">Learn More</a>
       </p>
     </section>
-
   </div>
 </template>
+
+<script setup lang="ts">
+import {
+  ClientOnly,
+  usePageFrontmatter,
+  useSiteLocaleData,
+  withBase,
+} from "@vuepress/client";
+import type { FunctionalComponent } from "vue";
+import { computed, h } from "vue";
+// import { useDarkMode } from "../composables";
+const frontmatter = usePageFrontmatter();
+const siteLocale = useSiteLocaleData();
+// const isDarkMode = useDarkMode();
+const heroImage = computed(() => {
+  if (frontmatter.value.heroImageDark !== undefined) {
+    return frontmatter.value.heroImageDark;
+  }
+  return frontmatter.value.heroImage;
+});
+const heroText = computed(() => {
+  if (frontmatter.value.heroText === null) {
+    return null;
+  }
+  return frontmatter.value.heroText || siteLocale.value.title || "Hello";
+});
+const heroAlt = computed(
+  () => frontmatter.value.heroAlt || heroText.value || "hero"
+);
+const tagline = computed(() => {
+  if (frontmatter.value.tagline === null) {
+    return null;
+  }
+  return (
+    frontmatter.value.tagline ||
+    siteLocale.value.description ||
+    "Welcome to your VuePress site"
+  );
+});
+
+const tagline2 = computed(() => {
+  if (frontmatter.value.tagline2 === null) {
+    return null;
+  }
+  return frontmatter.value.tagline2;
+});
+
+const tagline3 = computed(() => {
+  if (frontmatter.value.tagline3 === null) {
+    return null;
+  }
+  return frontmatter.value.tagline3;
+});
+
+const HomeHeroImage: FunctionalComponent = () => {
+  if (!heroImage.value) return null;
+  const img = h("img", {
+    src: withBase(heroImage.value),
+    alt: heroAlt.value,
+  });
+  if (frontmatter.value.heroImageDark === undefined) {
+    return img;
+  }
+  // wrap hero image with <ClientOnly> to avoid ssr-mismatch
+  // when using a different hero image in dark mode
+  return h(ClientOnly, () => img);
+};
+</script>
+
+
 
 <style scoped>
 section {
@@ -26,7 +101,7 @@ section {
   text-align: center;
 }
 .tagline {
-  font-size: 76px;
+  font-size: 90px;
   line-height: 1.25;
   font-weight: 900;
   letter-spacing: -1.5px;
@@ -43,19 +118,17 @@ html:not(.dark) .accent,
 .description {
   max-width: 960px;
   line-height: 1.5;
-  color: var(--vt-c-text-2);
-  transition: color 0.5s;
-  font-size: 22px;
-  margin: 24px auto 40px;
+  transition: color 2s;
+  font-size: 20px;
 }
 .actions a:not(.get-started) {
   font-size: 16px;
   display: inline-block;
-  background-color: var(--vt-c-bg-mute);
+  background-color: var(--c-bg-light);
   padding: 8px 18px;
   font-weight: 500;
   border-radius: 8px;
-  transition: background-color 0.5s, color 0.5s;
+  transition: background-color 0.5s, color 1s;
 }
 .actions .icon {
   display: inline;
@@ -72,43 +145,43 @@ html:not(.dark) .accent,
   transform: translateX(2px);
 }
 .actions .setup {
-  color: var(--vt-c-text-code);
+  color: var(--c-text);
 }
 .actions .setup:hover {
-  background-color: var(--vt-c-gray-light-4);
+  background-color: #e5e5e5;
   transition-duration: 0.2s;
 }
 .dark .actions .setup:hover {
-  background-color: var(--vt-c-gray-dark-3);
+  background-color: #3a3a3a;
 }
 
 .get-started {
   font-size: 16px;
   display: inline-block;
   border-radius: 8px;
-  transition: background-color 0.5s, color 0.5s;
+  transition: background-color 0.5s, color 1s;
   position: relative;
   font-weight: 600;
-  background-color: var(--vt-c-green);
+  background-color: #42b883;
   color: #fff;
   margin-right: 18px;
   padding: 8px 18px;
 }
 .dark .get-started {
-  color: var(--vt-c-indigo);
+  color: #213547;
 }
 .get-started:hover {
-  background-color: var(--vt-c-green-dark);
+  background-color: #33a06f;
   transition-duration: 0.2s;
 }
 .dark .get-started:hover {
-  background-color: var(--vt-c-green-light);
+  background-color: #42d392;
 }
 
-#highlights {
+/* #highlights {
   max-width: 960px;
   margin: 0px auto;
-  color: var(--vt-c-text-2);
+  color: rgba(60, 60, 60, 0.70);
 }
 #highlights h2 {
   font-weight: 600;
@@ -124,7 +197,7 @@ html:not(.dark) .accent,
 }
 #highlights .vt-box {
   background-color: transparent;
-}
+} */
 @media (max-width: 960px) {
   .tagline {
     font-size: 64px;

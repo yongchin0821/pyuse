@@ -6,8 +6,8 @@ import { defaultTheme, defineUserConfig } from 'vuepress'
 
 export default defineUserConfig({
   // title: "pyuse文档",
-  description: "基于unittest 的 Web UI/HTTP自动化测试框架。",
-  base: "/",
+  description: "a python3 wheels library",
+  base: "/pyuse/",
   locales: {
     "/": {
       lang: "en-US",

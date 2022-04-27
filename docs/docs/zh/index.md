@@ -1,13 +1,16 @@
 ---
 home: true
 heroText: 
-heroImage: /logo.png
+# heroImage: /logo.png
+tagline: 一个 python3 的库
+tagline2: 开箱即用 📦, 直接起飞 🚀
+tagline3: 有点意思 ✨
 actions: 
   - text: 快速上手→
-    link: /guide/quick_start/
+    link: /zh/guide/quick_start/
     type: primary
   - text: 项目简介
-    link: /guide/introduce/
+    link: /zh/guide/introduce/
     type: secondary
 features:
   - title: 开箱即用
