@@ -21,4 +21,6 @@
 <br />
 <br />
 
+As Easy as 1, 2, 3. [document](https://yongchin0821.github.io/pyuse/)
+
 hope and invite you all to contribute to this project ✨
