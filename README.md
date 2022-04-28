@@ -1,7 +1,7 @@
 <br />
 <br />
 <p align="center">
-  <img height="90" src="./docs/docs/logo.png" alt="Vue Starport" />
+  <img height="90" src="./docs/docs/logo.png" alt="PyUse" />
 </p>
 
 <p align="center">A Python3 Wheels Library</p>
