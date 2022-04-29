@@ -2,6 +2,8 @@
 
 基于 vuepress2.0+ 的 **pyuse [操作文档](https://yongchin0821.github.io/pyuse/)**
 
+首页的部分样式 [参考了这里](https://github.com/mx-space/docs)
+
 你可以使用 Markdown 书写文档，并通过 VuePress 部署为可预览的页面。
 
 ## 📖使用说明
