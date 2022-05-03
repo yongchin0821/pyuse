@@ -4,7 +4,7 @@
 
 utils about of time
 
-### 🪧 property
+### 📜 property
 
 static: read only
 dynamic: can be changed，will share state with other dynamic properties

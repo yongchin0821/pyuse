@@ -39,7 +39,7 @@ export default defineUserConfig({
     docsBranch: "main/docs/docs",
     locales: {
       "/": {
-        navbar: [{ text: "guide", link: "guide/introduce" }],
+        navbar: [{ text: "guide", link: "/guide/introduce" }],
         sidebar: [
           {
             text: "Guide",

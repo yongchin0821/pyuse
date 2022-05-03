@@ -15,8 +15,8 @@
       </p>
 
       <p class="actions">
-        <a class="get-started" href="/guide/quick_start/"> Get Started -> </a>
-        <a class="setup" href="/guide/introduce/">Learn More</a>
+        <a class="get-started" href="/pyuse/guide/quick_start/"> Get Started -> </a>
+        <a class="setup" href="/pyuse/guide/introduce/">Learn More</a>
       </p>
     </section>
   </div>
