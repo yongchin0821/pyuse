@@ -6,7 +6,7 @@
 
 ### 📜 property
 
-static: 只读属性
+static: 只读属性  
 dynamic: 意味着你可以改变它的值，且可能与其他动态属性共享状态
 
 #### static

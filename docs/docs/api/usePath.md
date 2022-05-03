@@ -6,7 +6,7 @@ utils about of path
 
 ### 📜 property
 
-static: read only
+static: read only  
 dynamic: can be changed，will share state with other dynamic properties
 
 
