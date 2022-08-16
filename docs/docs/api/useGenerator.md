@@ -16,21 +16,21 @@ g.get_phone()
 #### get_username()
 
 ```python
-g.get_username("some text")
+g.get_username()
 >>> UZRhZM
 ```
 
 #### get_passwd()
 
 ```python
-g.get_username("some text")
+g.get_passwd()
 >>> Rx19371684
 ```
 
 #### get_email()
 
 ```python
-g.get_username("some text")
+g.get_email()
 >>> Rz092686@163.com
 ```
 
