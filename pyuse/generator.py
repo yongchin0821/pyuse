@@ -34,6 +34,10 @@ class DatasGenerator:
         return email
 
     @staticmethod
+    def get_number(lenth: int = 6) -> str:
+        return ''.join(random.choice("0123456789") for i in range(lenth))
+
+    @staticmethod
     def get_IDcard():
         idcard = "500104"
         idcard = idcard + str(random.randint(1950, 2018))  # 年份项
