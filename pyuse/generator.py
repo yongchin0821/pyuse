@@ -87,10 +87,21 @@ class DatasGenerator:
         # print (str(VIN) + ':' + str(TrueVIN))
         return str(TrueVIN)
 
+    @staticmethod
+    def get_code(type: str = "normal", lenth: int = 8):
+        if type == "weak":
+            return ''.join(random.choice(string.ascii_lowercase) for i in range(lenth))
+        elif type == "normal":
+            return ''.join(random.choice(string.ascii_letters) for i in range(lenth))
+        elif type == "strong":
+            return ''.join(random.choice(string.printable[:-6]) for i in range(lenth))
+        else:
+            return ''.join(random.choice(string.ascii_lowercase) for i in range(lenth))
+
 
 if __name__ == '__main__':
     g = DatasGenerator()
-    print(g.get_phone())
-    print(g.get_username())
-    print(g.get_passwd())
-    print(g.get_email())
+    a = string.printable[:-6]
+    print(g.get_code("strong", 8))
+    print(g.get_code())
+    print()
