@@ -34,6 +34,17 @@ g.get_email()
 >>> Rz092686@163.com
 ```
 
+#### get_code()
+
+```python
+g.get_code("weak", 6)
+>>> gsxmbk
+g.get_code("strong", 8)
+>>> 6[8Jj!<:
+g.get_code()
+>>> FiFdBbGE
+```
+
 ### 🎐 demo
 
 ```python
