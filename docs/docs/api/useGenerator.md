@@ -34,6 +34,24 @@ g.get_email()
 >>> Rz092686@163.com
 ```
 
+#### get_number(lenth: int = 6) -> str
+```python
+g.get_number()
+>>> 306188
+```
+
+#### get_IDcard():
+```python
+g.get_IDcard()
+>>> 500104195910041488
+```
+
+#### get_vin():
+```python
+g.get_vin()
+>>> 0UXEJW2E072SY4934
+```
+
 #### get_code()
 
 ```python
