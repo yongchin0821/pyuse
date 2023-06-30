@@ -10,7 +10,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="pyuse-core",
-    version="0.0.4",
+    version="0.0.6",
     author="Yongchin",
     author_email="yongchin39@qq.com",
     description="A pkg of wheels. Hope it helps you to write less code.",
